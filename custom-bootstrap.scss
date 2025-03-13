@@ -18,8 +18,47 @@ $new-colors: (
 );
 
 $theme-colors: map-merge($theme-colors, $new-colors);
+$grid-gutter-width: 0.5rem;
+$font-sizes: map-merge(
+  $font-sizes,
+  (
+    7: 0.75rem,
+    // 12px
+    8: 0.625rem,
+    // 10px
+    9: 0.5rem,
+    // 8px
+    10: 0.375rem // 6px,,,
+  )
+);
+$border-widths: map-merge(
+  $border-widths,
+  (
+    6: 6px,
+    7: 7px,
+    8: 8px,
+    9: 9px,
+    10: 10px,
+  )
+);
+
 $border-radius-pill: 50rem;
 $badge-border-radius: $border-radius-pill;
 $input-border-radius: $border-radius-pill;
 $btn-border-radius: $border-radius-pill;
+$grid-breakpoints: map-merge(
+  $grid-breakpoints,
+  (
+    "3xl": 1600px,
+    "4xl": 1800px,
+  )
+);
+
+$container-max-widths: map-merge(
+  $container-max-widths,
+  (
+    "3xl": 1520px,
+    "4xl": 1720px,
+  )
+);
 @import "./scss/bootstrap.scss";
