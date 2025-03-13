@@ -18,4 +18,8 @@ $new-colors: (
 );
 
 $theme-colors: map-merge($theme-colors, $new-colors);
+$border-radius-pill: 50rem;
+$badge-border-radius: $border-radius-pill;
+$input-border-radius: $border-radius-pill;
+$btn-border-radius: $border-radius-pill;
 @import "./scss/bootstrap.scss";
