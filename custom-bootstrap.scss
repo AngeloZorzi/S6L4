@@ -1,5 +1,5 @@
-@import "/scss/functions";
-@import "/scss/variables";
+@import "./scss/functions";
+@import "./scss/variables";
 //nuovi colori
 $new-danger: #ff0077;
 $new-info: #00ffea;
@@ -9,8 +9,13 @@ $epicode-2: #8625a5;
 $epicode-3: #cb2376;
 
 $new-colors: (
-  "danger": $new-danger "info": $new-info "light": $new-light,
+  "danger": $new-danger,
+  "info": $new-info,
+  "light": $new-light,
   "epicode-1": $epicode-1,
   "epicode-2": $epicode-2,
   "epicode-3": $epicode-3,
 );
+
+$theme-colors: map-merge($theme-colors, $new-colors);
+@import "./scss/bootstrap.scss";
